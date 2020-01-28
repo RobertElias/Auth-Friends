@@ -11,12 +11,12 @@ function App() {
 
         <ul>
           <Link to="/login">Login</Link>
-          <Link to="">Add Friends Page</Link>
+          <Link to="">Add Friends</Link>
         </ul>
         <Switch>
           <Route exact path="/friends" component="" />
-          <Route path="/login" component="login"/>
-          <Route component="login"/>
+          <Route path="/login" component={Login}/>
+          <Route component={Login}/>
         </Switch>
       </div>
     </Router>
