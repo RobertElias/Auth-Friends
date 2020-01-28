@@ -14,7 +14,7 @@ function App() {
           <Link to="">Add Friends</Link>
         </ul>
         <Switch>
-          <Route exact path="/friends" component="" />
+          <Route exact path="/friendsList" component="" />
           <Route path="/login" component={Login}/>
           <Route component={Login}/>
         </Switch>
