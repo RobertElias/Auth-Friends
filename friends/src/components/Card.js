@@ -5,9 +5,9 @@ export function Card(props) {
 
   return (
     <div>
-      <h1>{props.item.name}</h1>
-      <p>{props.item.age}</p>
-      <p>{props.item.email}</p>
+      <h1>Name: {props.item.name}</h1>
+      <p>Age: {props.item.age}</p>
+      <p>Email: {props.item.email}</p>
     </div>
   );
 }
