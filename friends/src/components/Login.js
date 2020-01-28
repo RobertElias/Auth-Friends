@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios";
+//import axios from "axios";
+import {axiosWithAuth} from '../utils/axiosWithAuth'
 
 class Login extends React.Component {
   state = {
@@ -25,14 +26,13 @@ class Login extends React.Component {
     // based on the users credentials
     // If user can't be authenticated server will return a token...
     //using local storage
-    axios
-      .post("http://localhost:5000/api/login", this.state.credentials)
+    axiosWithAuth().post("/api/login", this.state.credentials)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
-        this.props.history.push("/protected");
-        //console.log(res);
+        this.props.history.push("/friendslist");
+        console.log(res.data.payload);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log("There was an error", err));
   };
 
   render() {
@@ -51,7 +51,7 @@ class Login extends React.Component {
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
-          <button>Log in</button>
+          <button type="submit">Log in</button>
         </form>
       </div>
     );
