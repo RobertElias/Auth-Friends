@@ -4,6 +4,7 @@ import { Card } from "./Card";
 
 export const FriendsList = (props) => {
     const [friends, setFriends] = useState();
+    
     useEffect(() => {
         localStorage.getItem('token') &&
         axiosWithAuth().get('/api/friends')

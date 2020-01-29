@@ -35,7 +35,7 @@ export const AddFriend = props => {
           }}
         />
         <input
-        //   type="text"
+          type="text"
           type="text"
           name="age"
           placeholder="Age"
