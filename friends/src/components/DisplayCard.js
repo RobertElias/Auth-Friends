@@ -11,7 +11,7 @@ export function DisplayCard(props) {
     <div className="formcard">
       <Card className="form3">
       <CardBody class="cardbody">
-          <CardTitle>Friends List</CardTitle>
+          
           <CardSubtitle>Name: {props.item.name}</CardSubtitle>
           <CardSubtitle>Age: {props.item.age}</CardSubtitle>
           <CardSubtitle>Email: {props.item.email}</CardSubtitle>  

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Prompt|Roboto');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Prompt|Roboto");
 
 html,
 body {
@@ -7,40 +7,33 @@ body {
 }
 
 .App {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   padding-bottom: 36px;
 }
 .nav {
   text-align: center;
   padding-bottom: 36px 36px;
-  
 }
 .form {
   border: 1px solid gray;
-  width: 50%
-  
+  width: 50%;
 }
-.form1{
+.form1 {
   display: flex;
   justify-content: center;
   margin: 5% 20% 30% 20%;
-  
 }
-.formcard{
-
-  color:gold;
+.formcard {
+  /* background: #2f76b99d; */
+  color: #2f76b99d;
   margin: 2% 15% 0% 37%;
 }
-.form3{
-  background-color: indigo;
-
+.form3 {
   border: 1px solid gray;
-  width: 50%
+  width: 50%;
 }
-.cardbody{
-  background-color: lawngreen;
-}
+
 ul {
   display: flex;
   justify-content: center;
@@ -91,7 +84,7 @@ a {
 }
 
 .top-title {
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.62);
   font-size: 32px;
   background-color: #ea7158;
@@ -99,7 +92,7 @@ a {
 }
 
 .bottom-title {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   color: #204963;
   font-size: 22px;
 }
@@ -133,14 +126,14 @@ a {
   color: #ffffff;
   margin: 0;
   margin-right: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 
 .Hawaii-key-text {
   color: #204963;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 

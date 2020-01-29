@@ -57,7 +57,7 @@ export const AddFriend = props => {
             setForm({ ...form, [e.target.name]: e.target.value });
           }}
         />
-        <button type="submit">Add A Friend</button>
+        <Button type="submit" color="info">Add A Friend</Button>
       </Form>
     </div>
   );
