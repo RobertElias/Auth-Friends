@@ -1,6 +1,6 @@
 import React from "react";
-//import axios from "axios";
-import {axiosWithAuth} from '../utils/axiosWithAuth'
+import { Button, Form, Label, Input } from "reactstrap";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 class Login extends React.Component {
   state = {
@@ -26,7 +26,8 @@ class Login extends React.Component {
     // based on the users credentials
     // If user can't be authenticated server will return a token...
     //using local storage
-    axiosWithAuth().post("/api/login", this.state.credentials)
+    axiosWithAuth()
+      .post("/api/login", this.state.credentials)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
         this.props.history.push("/friendslist");
@@ -37,22 +38,27 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.login}>
-          <input
+      <div className="form1">
+        
+        <Form className="form" onSubmit={this.login}>
+          <Label for="exampleEmail">Email</Label>
+          <Input
             type="text"
             name="username"
             value={this.state.credentials.username}
             onChange={this.handleChange}
           />
-          <input
+          <Label for="examplePassword">Password</Label>
+          <Input
             type="password"
             name="password"
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
-          <button type="submit">Log in</button>
-        </form>
+          <Button type="submit" color="info">
+            Log in
+          </Button>
+        </Form>
       </div>
     );
   }

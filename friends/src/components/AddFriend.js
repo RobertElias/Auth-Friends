@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Form, Label, Input } from "reactstrap";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 //import { axiosWithAuth } from '../utils/axiosWithAuth';
 
@@ -11,9 +12,9 @@ export const AddFriend = props => {
   });
 
   return (
-    <div>
-      <h1>This is your AddFriend Form:</h1>
-      <form
+    <div className="form1">
+      
+      <Form className="form"
         onSubmit={e => {
           e.preventDefault();
           axiosWithAuth()
@@ -25,8 +26,9 @@ export const AddFriend = props => {
             .catch(error => console.log(error));
         }}
       >
-        <input
-        //   type="text"
+        <Label for="Name">Name:</Label>
+        <Input
+          //   type="text"
           name="name"
           placeholder="Name"
           value={form.name}
@@ -34,7 +36,8 @@ export const AddFriend = props => {
             setForm({ ...form, [e.target.name]: e.target.value });
           }}
         />
-        <input
+        <Label for="Age">Age:</Label>
+        <Input
           type="text"
           type="text"
           name="age"
@@ -44,7 +47,8 @@ export const AddFriend = props => {
             setForm({ ...form, [e.target.name]: e.target.value });
           }}
         />
-        <input
+        <Label for="exampleEmail">Email:</Label>
+        <Input
           type="text"
           name="email"
           placeholder="Email"
@@ -54,7 +58,7 @@ export const AddFriend = props => {
           }}
         />
         <button type="submit">Add A Friend</button>
-      </form>
+      </Form>
     </div>
   );
 };
